@@ -8,6 +8,7 @@ const weather = require("./utils/weather");
 
 
 const app = express();
+const port = process.env.PORT || 4000;
 
 // Use templating engine
 app.set("view engine","hbs");
@@ -80,6 +81,6 @@ app.get("*",(req,res)=>{
     })
 });
 
-app.listen(4000,()=>{
+app.listen(port,()=>{
     console.log("Server started at port 4000");
 });
